@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "tailwindcss/tailwind.css";
 import "./../App.css";
+import logo from "./logo.png";
 
 const ItemList = () => {
   const [data, setData] = useState([]);
@@ -47,6 +48,7 @@ const ItemList = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4">
+      <img src={logo} width={40} height={20} alt="assessment-logo" />
       <h1 className="text-3xl font-bold mb-6">Item List</h1>
       {loading && <div className="text-xl">Loading...</div>}
       {error && <div className="text-red-500">Error: {error}</div>}
